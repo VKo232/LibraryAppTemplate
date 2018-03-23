@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class LibraryApp {
-    private static Library library = new Library();
+class Main {
+    public static Library library = new Library();
 
     public static void main(String[] args) {
     	init();
@@ -22,7 +22,7 @@ public class LibraryApp {
                     System.out.println(library.books[i].title + ", " + library.books[i].author);
                 }
         	} else if(input == 3) {
-        		
+        		System.out.println(library.location.toString());
         	} else if(input == 4) {
         		break;
         	}
@@ -32,66 +32,37 @@ public class LibraryApp {
 
     public static void init() {
         Member[]members = new Member[3];
-        Address[] addresses = new Address[4];
+        Address address = new Address();
         Book[] books = new Book[3];
-        
-        
-        
+
         for(int i = 0; i < 3; i++) {
             members[i] = new Member();
-            addresses[i] = new Address();
+            books[i] = new Book();
         }
-        addresses[3] = new Address();
-        addresses[0].street = "Love Street";
-        addresses[0].city = "New York";
-        addresses[0].province = "Prince Edward Island";
-        addresses[0].postalCode = "LB46T2";
-       
-        addresses[1].street = "Farbod Street";
-        addresses[1].city = "Thornhill";
-        addresses[1].province = "Ontario";
-        addresses[1].postalCode = "L3T666";
-        
-        addresses[2].street = "Devil Street";
-        addresses[2].city = "Hell";
-        addresses[2].province = "dfsfd";
-        addresses[2].postalCode = "qwerw";
-        
-        addresses[3].street = "qwetyt";
-        addresses[3].city = "qwert";
-        addresses[3].province = "qwert";
-        addresses[3].postalCode ="L3T4A9";
-        
-
-        
         members[0].name = "Demetrius";
         members[0].birthYear = 2001;
-        members[0].address =addresses[0];
-
+        
         members[1].name = "Victor";
-        members[1].birthYear = "2000";
-        members[1].address = addresses[1];
-
+        members[1].birthYear = 2000;
+        
         members[2].name = "Gallo";
         members[2].birthYear = 1982;
-        members[2].address = addresses[2];
-
-
+        members[2].address.street = "green lane";
+        members[2].address.city = "toronto";
+        members[2].address.province = "ontario";
+        members[2].address.postalCode = "L3T4T1";
 
         library.name = "The Cranium";
-        library.location = address[3];
+        library.location = address;
 
         books[0].title = "Teacher stalking 101";
         books[0].author = "Jaron B.";
-        books[0].pages = "30";
 
         books[1].title = "The Giving Tree";
         books[1].author = "Shel Silverstein";
-        books[1].pages = "25";
 
         books[2].title = "Book";
         books[2].author = "Author Writer";
-        books[2].pages = "1";
 
         for(int i = 0; i < 3; i++) {
             library.addMember(members[i]);
