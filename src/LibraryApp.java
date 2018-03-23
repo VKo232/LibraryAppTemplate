@@ -18,7 +18,9 @@ public class LibraryApp {
         			System.out.println( i +". " + library.members[i].name + "     " +  library.members[i].getAge() + " years old        " + library.members[i].address.toString());
         		}
         	} else if(input == 2) {
-        		
+                for (int i = 0; i < library.books.length; i++){
+                    System.out.println(library.books[i].title + ", " + library.books[i].author);
+                }
         	} else if(input == 3) {
         		
         	} else if(input == 4) {
