@@ -60,7 +60,7 @@ public class LibraryApp {
         addresses[3].street = "qwetyt";
         addresses[3].city = "qwert";
         addresses[3].province = "qwert";
-        addresses[3].postalCode ="qweer";
+        addresses[3].postalCode ="L3T4A9";
         
 
         
