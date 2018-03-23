@@ -15,7 +15,7 @@ public class LibraryApp {
         	int input = Integer.parseInt(sc.nextLine());
         	if(input == 1) {
         		for(int i = 0; i < library.members.length; i++) {
-        			System.out.println( i +". "library.members[i].name + "     " +  library.members[i].getAge() + " years old        " + library.members[i].address.toString());
+        			System.out.println( i +". " + library.members[i].name + "     " +  library.members[i].getAge() + " years old        " + library.members[i].address.toString());
         		}
         	} else if(input == 2) {
         		
