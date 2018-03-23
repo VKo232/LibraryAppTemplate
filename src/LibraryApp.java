@@ -22,7 +22,7 @@ public class LibraryApp {
                     System.out.println(library.books[i].title + ", " + library.books[i].author);
                 }
         	} else if(input == 3) {
-        		
+        		System.out.println(Library.Address.toString());
         	} else if(input == 4) {
         		break;
         	}
