@@ -2,7 +2,19 @@
  * Library class
  */
 public class Library {
-
+	
+	String name;
+	Address location;
+	Book[] books;
+	Member[] members;
+	
+	public Library() {
+		books = new Book[0];
+		members = new Member[0];
+		name = "";
+		location = new Address();
+		
+	}
 
     /**
      * addBook(Book) : void
@@ -14,7 +26,14 @@ public class Library {
      * @param book
      *          A new book object to add to the books list
      */
+	public void addBook(Book book) {
+	    Book[] newArray = new Book[books.length + 1];
+	    System.arraycopy(books, 0, newArray, 0, books.length);
 
+	    books = newArray;
+	    books[books.length -1] = book;
+	    
+	}
 
 
 
@@ -30,7 +49,14 @@ public class Library {
      * @param member
      *          A new member object to add to the members list
      */
+	public void addMember(Member member) {
+		
+	    Member[] newArray = new Member[members.length + 1];
+	    System.arraycopy(members, 0, newArray, 0, members.length);
 
+	    members = newArray;
+	    members[members.length -1] = member;
+	}
 
 
 
